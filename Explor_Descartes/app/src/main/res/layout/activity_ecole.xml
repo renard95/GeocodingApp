@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!--Barre d'application-->
+    <include layout="@layout/app_bar"/>
+
+    <!--Contenu de l'activité-->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nomEcole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/nomEcole"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/imageEcole"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/white"
+                android:contentDescription="@string/imageEcole"
+                android:padding="15dp"
+                app:srcCompat="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/infoEcole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:id="@+id/adresse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:id="@+id/pointeur"
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/white"
+                        android:contentDescription="@string/pointeur"
+                        app:srcCompat="@drawable/pointeur" />
+
+                    <TextView
+                        android:id="@+id/adresseEcole"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="@string/adresseEcole"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/site"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/web"
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/white"
+                        android:contentDescription="@string/web"
+                        app:srcCompat="@drawable/web" />
+
+                    <TextView
+                        android:id="@+id/siteEcole"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="@string/siteEcole"
+                        android:textColor="@android:color/black"
+                        android:textColorLink="@color/colorPrimary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/descriptif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/descriptif"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/descriptionEcole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:text="@string/descriptionEcole"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/extensions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <ExpandableListView
+                    android:id="@+id/formations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginBottom="4dp"/>
+
+                <ExpandableListView
+                    android:id="@+id/evenements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--Menu des activités (à gauche)-->
+    <ListView
+        android:id="@+id/leftMenuList"
+        android:layout_gravity="start"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="#615B5B"
+        android:dividerHeight="4px"
+        android:background="#FFFFFF"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/selector_la"/>
+
+    <!--Menu notifications et favoris (à droite)-->
+    <include layout="@layout/menu_right"/>
+
+</android.support.v4.widget.DrawerLayout>

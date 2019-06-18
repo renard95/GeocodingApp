@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ModifierPerso">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/modifier_donnees_perso"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="@string/modif_prenom"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/prenomET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/modif_prenom"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="@string/modif_nom"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/nomET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/modif_nom"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="@string/pseudo"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/pseudoET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/pseudo"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="@string/mail"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/mailET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/mail"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/validationB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/valider"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ModifierMdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/modifier_mdp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/entrer_mdp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/mdpET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/mdp"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/mdp_confirmation"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/mdp_confirmET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/mdp_confirmation"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/validationB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/valider"
+        android:textColor="@android:color/white" />
+</LinearLayout>

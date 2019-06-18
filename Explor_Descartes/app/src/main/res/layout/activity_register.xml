@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_constraintBottom_toBottomOf="@+id/connexion"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logo"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/classiqueI"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/classiqueI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/formulaireC"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <LinearLayout
+        android:id="@+id/formulaireC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/accord"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classiqueI">
+
+        <EditText
+            android:id="@+id/prenomET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:hint="Surname (optionnal)"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/nomET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:hint="Name (optionnal)"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/pseudoET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:hint="@string/pseudo"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/mailET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:hint="@string/mail"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:id="@+id/mdpET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:selectAllOnFocus="false"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/mdp_confirmET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/accord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textColorLink="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/validationB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaireC" />
+
+    <Button
+        android:id="@+id/validationB"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Accept and register"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/connexion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accord" />
+
+    <LinearLayout
+        android:id="@+id/connexion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validationB">
+
+        <TextView
+            android:id="@+id/connexionT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have an account ?"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/connexionB"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
